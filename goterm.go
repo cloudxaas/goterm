@@ -17,7 +17,6 @@ func YesNo(yn uint8) uint8 {
 	var s string
 	var err error
 	for {
-
 		s, err = reader.ReadString('\n')
 		if err != nil {
 			log.Fatal(err)
@@ -29,7 +28,6 @@ func YesNo(yn uint8) uint8 {
 			}
 
 		}
-
 	}
 	return 0
 }
