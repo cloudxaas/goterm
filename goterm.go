@@ -7,7 +7,7 @@ import (
 
 
 //if yn == 1, Yes as default otherwise No as default
-func YesNo(uint8 yn) uint8 {
+func YesNo(yn uint8) uint8 {
         if yn == 0 {
                 fmt.Printf("(y/N): ")
         }else{  
