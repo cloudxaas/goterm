@@ -14,17 +14,24 @@ func YesNo(yn uint8) uint8 {
                 fmt.Printf("(Y/n): ")
         }
 
+        
         var s string
-
+        var err error
         for {   
+                
+                s, err = reader.ReadString('\n')
+		if err != nil {
+			log.Fatal(err)
+		}
                 _, err := fmt.Scan(&s)
                 if err == nil {
-                        break
-                        //fmt.Print(err)
-                }
-        }
         if strings.ToLower(strings.TrimSpace(s)) == "y" {
                 return 1
+        }
+                       
+                        
+                }
+
         }
         return 0
 }
